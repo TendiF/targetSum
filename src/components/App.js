@@ -124,7 +124,7 @@ class App extends Component {
                         {renderButton(0,2)}
                     </View>
                 </View>
-                <View>
+                <View style={styles.footer}>
                     {this.state.currentGame ? <Button title="restart" onPress={restartGame}/> : null}
                 </View>
             </View>
@@ -143,7 +143,12 @@ const styles = StyleSheet.create({
     board : {
         flex : 0.5,
         flexDirection : 'row',
-        alignItems : 'stretch'
+        alignItems : 'stretch',
+        justifyContent : 'space-around'
+    },
+    footer : {
+        flex : 0.5,
+        justifyContent : 'flex-end'
     }
 });
 
